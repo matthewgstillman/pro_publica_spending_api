@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Committees</title>
+{% endblock%}
+
+
+{% block content %}
+<a href="/">Go Back</a>
+<div class="container">
+    <h1>Pro Public Political Spending API</h1>
+    {% for comms in comms %}
+    {% if comms.committee.gross_amt == None %}
+    <h6>Committee Name: {{ comms.committee.name }} - Gross Amount Raised: None</h6>
+    {% endif %}
+    {% if comms.committee.gross_amt != None %}
+    <h6>Committee Name: {{ comms.committee.name }} - Gross Amount Raised: ${{ comms.committee.gross_amt }}</h6>
+    {% endif %}
+    {% endfor %}
+    <br>
+</div>
+{% endblock %}

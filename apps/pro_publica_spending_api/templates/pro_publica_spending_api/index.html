@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Home</title>
+{% endblock%}
+
+
+{% block content %}
+<div class="container">
+    <h1>Pro Public Political Spending API</h1>
+    {% for spending in spending %}
+    <h6>{{ spending.market.titleized_name }} - Free Filings - {{ spending.market.freed_ct }} -  Court Filings: {{ spending.market.filings_ct }}</h6>
+    {% endfor %}
+    <br>
+</div>
+{% endblock %}
