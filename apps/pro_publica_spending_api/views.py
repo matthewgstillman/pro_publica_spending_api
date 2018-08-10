@@ -8,9 +8,11 @@ def index(request):
     print("Response: " + str(response))
     spending = response.json()
     print("Spending: " + str(spending))
+    sorted_spending = sorted(spending)
     context = {
         'response': response,
         'spending': spending,
+        'sorted_spending': sorted_spending,
     }
     return render(request, 'pro_publica_spending_api/index.html', context)
 

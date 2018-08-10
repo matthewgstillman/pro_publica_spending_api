@@ -6,10 +6,11 @@
 
 
 {% block content %}
+<a href="/comms">See Donations By Committee</a>
 <div class="container">
     <h1>Pro Public Political Spending API</h1>
     {% for spending in spending %}
-    <h6>{{ spending.market.titleized_name }} - Free Filings - {{ spending.market.freed_ct }} -  Court Filings: {{ spending.market.filings_ct }}</h6>
+    <h6>{{ spending.market.titleized_name }} - Verified Filings - {{ spending.market.freed_ct }} -  Court Filings: {{ spending.market.filings_ct }}</h6>
     {% endfor %}
     <br>
 </div>
