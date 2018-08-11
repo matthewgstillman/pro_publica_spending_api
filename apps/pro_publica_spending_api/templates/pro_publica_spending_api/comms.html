@@ -11,10 +11,12 @@
     <h1>Pro Public Political Spending API</h1>
     {% for comms in comms %}
     {% if comms.committee.gross_amt == None %}
-    <h6>Committee Name: {{ comms.committee.name }} - Gross Amount Raised: None</h6>
+    <h6>{{ comms.committee.name.title }} - Gross Amount Raised: None</h6>
+    <h6>{{ comms.committee.id }}</h6>
     {% endif %}
     {% if comms.committee.gross_amt != None %}
-    <h6>Committee Name: {{ comms.committee.name }} - Gross Amount Raised: ${{ comms.committee.gross_amt }}</h6>
+    <h6>{{ comms.committee.name.title }} - Gross Amount Raised: ${{ comms.committee.gross_amt }}</h6>
+    <h6>{{ comms.committee.id }}</h6>
     {% endif %}
     {% endfor %}
     <br>
