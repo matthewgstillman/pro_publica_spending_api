@@ -8,15 +8,15 @@
 {% block content %}
 <a href="/comms">See Donations By Filing</a>
 <div class="container">
-    <h1>Pro Public Political Spending API</h1>
+    <h1>Pro Publica Political Spending API</h1>
     {% for filing in filings.filing %}
     <h6>Filing Date: {{ filings.filing.upload_date }}</h6>
     <h6>Agency Name: {{ filings.filing.agency.name.title }}</h6>
     <h6>Filing Type: {{ filings.filing.filing_type }}</h6>
-    <h6>Filing URL: {{ filings.filing.url }}</h6>
     <h6>Gross Amount: ${{ filings.filing.gross_amount }}</h6>
     <h6>Committee: {{ filings.filing.committee.name.title }}</h6>
     <a href={{ filings.filing.thumbnail_url}}><img src="{{ filings.filing.thumbnail_url}}" alt="{{ filings.filing.committee.name.title}}"></a>
+    <h6>Filing URL: {{ filings.filing.url }}</h6>
     <br>
     {% endfor %}
 </div>

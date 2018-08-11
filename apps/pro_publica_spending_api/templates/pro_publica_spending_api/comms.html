@@ -8,7 +8,7 @@
 {% block content %}
 <a href="/">Go Back</a>
 <div class="container">
-    <h1>Pro Public Political Spending API</h1>
+    <h1>Pro Publica Political Spending API</h1>
     {% for comms in comms %}
     {% if comms.committee.gross_amt == None %}
     <h6>{{ comms.committee.name.title }} - Gross Amount Raised: None</h6>
